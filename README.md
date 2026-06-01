@@ -18,8 +18,7 @@
     │   └── dut.sv
     │
     ├── sim
-    │   ├── Makefile
-    │   └── runlist
+    │   └── Makefile
     │ 
     └── tb
         ├── env
@@ -50,19 +49,18 @@
         │
         ├── testcase
         │   ├── base_test.sv
-        │   ├── my_case1.sv
-        │   └── my_case1.sv
+        │   └── test_lib.sv
         │        
         └── top
-            ├── tb_top.sv
             ├── rtl.f
-            └── tb.f
+            ├── tb.f
+            └── tb_top.sv
 ```
 
 ## Makefile excution note
 make comp 
 
-make all TESTNAME=basetest
+make sim TESTNAME=basetest
 
 make sim TESTNAME=my_case0
 
