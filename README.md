@@ -1,13 +1,16 @@
 # UVM_Example_UVM_Register_Model
 
-#### Intro
+## Intro
 參考書籍 張強 《UVM实战》第六章 UVM_Sequence 及第七章 UVM_Register
+
 建立一個帶有Register Model的UVM測試平台
 
-#### Verification Environment
+## Verification Environment
 ```
     Project_root
     │
+    ├── README.md
+    │    
     ├── doc
     │   └── xxxx
     │
@@ -41,11 +44,10 @@
         │ 
         ├── sequence
         │   ├── sequence_bus.sv
-        │   └── sequencer_dut.sv
+        │   ├── sequencer_dut.sv
         │   ├── v_sequence.sv
         │   └── v_sequencer.sv
-
-
+        │
         ├── testcase
         │   ├── base_test.sv
         │   ├── my_case1.sv
@@ -57,7 +59,7 @@
             └── tb.f
 ```
 
-#### Makefile excution note
+## Makefile excution note
 make comp 
 
 make all TESTNAME=basetest
@@ -67,9 +69,12 @@ make sim TESTNAME=my_case0
 make sim TESTNAME=my_case1
 
 
-Dump FSDB:
+## UVM testbench topology
+```
+------------------------------------------------------------------
+Name                       Type                        Size  Value
+------------------------------------------------------------------
 
-make sim TESTNAME=my_case0 DUMP_EN=1
 
-make sim TESTNAME=my_case1 DUMP_EN=1
-
+------------------------------------------------------------------
+```
